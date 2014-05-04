@@ -1,6 +1,8 @@
 {
     "logLevel": "debug",
 
+    "cliPort": 17117,
+
     "clustering": {
         "enabled": true,
         "forks": "auto"
@@ -11,13 +13,9 @@
         "port": 80,
         "stratumHost": "cryppit.com",
         "stats": {
-            "updateInterval": 15,
+            "updateInterval": 60,
             "historicalRetention": 43200,
-            "hashrateWindow": 300,
-            "redis": {
-                "host": "localhost",
-                "port": 6379
-            }
+            "hashrateWindow": 300
         },
         "adminCenter": {
             "enabled": true,
@@ -25,47 +23,62 @@
         }
     },
 
-    "blockNotifyListener": {
-        "enabled": false,
-        "port": 8117,
-        "password": "test"
+    "redis": {
+        "host": "127.0.0.1",
+        "port": 6379
     },
 
-    "coinSwitchListener": {
-        "enabled": false,
-        "port": 8118,
-        "password": "test"
-    },
-
-    "proxy": {
-        "sha256": {
+    "switching": {
+        "switch1": {
             "enabled": false,
-            "port": "3333",
-            "diff": 10,
-            "varDiff": {
-                "minDiff": 16,
-                "maxDiff": 512,
-                "targetTime": 15,
-                "retargetTime": 90,
-                "variancePercent": 30
+            "algorithm": "sha256",
+            "ports": {
+                "3333": {
+                    "diff": 10,
+                    "varDiff": {
+                        "minDiff": 16,
+                        "maxDiff": 512,
+                        "targetTime": 15,
+                        "retargetTime": 90,
+                        "variancePercent": 30
+                    }
+                }
             }
         },
-        "scrypt": {
+        "switch2": {
             "enabled": false,
-            "port": "4444",
-            "diff": 10,
-            "varDiff": {
-                "minDiff": 16,
-                "maxDiff": 512,
-                "targetTime": 15,
-                "retargetTime": 90,
-                "variancePercent": 30
+            "algorithm": "scrypt",
+            "ports": {
+                "4444": {
+                    "diff": 10,
+                    "varDiff": {
+                        "minDiff": 16,
+                        "maxDiff": 512,
+                        "targetTime": 15,
+                        "retargetTime": 90,
+                        "variancePercent": 30
+                    }
+                }
             }
         },
-        "scrypt-n": {
+        "switch3": {
             "enabled": false,
-            "port": "5555"
+            "algorithm": "x11",
+            "ports": {
+                "5555": {
+                    "diff": 0.001
+                }
+            }
         }
+    },
+
+    "profitSwitch": {
+        "enabled": false,
+        "updateInterval": 600,
+        "depth": 0.90,
+        "usePoloniex": true,
+        "useCryptsy": true,
+        "useMintpal": true
     },
 
     "redisBlockNotifyListener": {
