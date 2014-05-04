@@ -1,0 +1,34 @@
+{
+    "name": "Dogecoin",
+    "symbol": "DOGE",
+    "algorithm": "scrypt",
+    "peerMagic": "c0c0c0c0",
+    "peerMagicTestnet": "fcc1b7dc"
+    "nValue": 1024, //可选项 - defaults to 1024
+    "rValue": 1, //可选项 - defaults to 1
+    "txMessages": false, //optional - defaults to false,
+    /* Magic value only required for setting up p2p block notifications. It is found in the daemon
+       source code as the pchMessageStart variable.
+       For example, litecoin mainnet magic: http://git.io/Bi8YFw
+       And for litecoin testnet magic: http://git.io/NXBYJA */
+    /* 只需要设置的p2p块通知魔法值。它是在后台程序源代码作为pchMessageStart变量中找到。
+       例如：litecoin mainnet magic: http://git.io/Bi8YFw
+       And for litecoin testnet magic: http://git.io/NXBYJA */
+    /* 以上范例如下：
+       main.cpp
+       unsigned char pchMessageStart[4] = { 0xfb, 0xc0, 0xb6, 0xdb }; // Litecoin: increase each by adding 2 to bitcoin's value.
+       得到  peerMagic
+       main.cpp
+       bool LoadBlockIndex()
+    if (fTestNet)
+    {  
+        pchMessageStart[0] = 0xfc;
+        pchMessageStart[1] = 0xc1;
+        pchMessageStart[2] = 0xb7;
+        pchMessageStart[3] = 0xdc;
+        hashGenesisBlock = uint256("0xf5ae71e26c74beacc88382716aced69cddf3dffff24f384e1808905e0188f68f");
+        得到  peerMagicTestnet
+    */
+     "peerMagic": "fbc0b6db" //可选项
+     "peerMagicTestnet": "fcc1b7dc" //可选项
+}
