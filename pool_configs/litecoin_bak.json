@@ -1,19 +1,21 @@
-var Stratum = require('stratum-pool');
+{
+    "enabled": false,
 
-var pool = Stratum.createPool({
+    "coin": "litecoin.json",
 
-    "coin": myCoin,
-
-    "address": "mi4iBXbBsydtcc5yFmsff2zCFVX4XG7qJc", //Address to where block rewards are given
+    "address": "mi4iBXbBsydtcc5yFmsff2zCFVX4XG7qJc", //币钱包地址
 
     /* Block rewards go to the configured pool wallet address to later be paid out to miners,
        except for a percentages that can go to pool operator(s) as pool fees or donations.
        Addresses or hashed public keys can be used. */
+    / *块的奖励去配置的池钱包地址后支付给矿工，
+???????除了一个百分比可以去游泳池运算符（ s）表示，由于池费或捐款。
+???????地址或散列公钥都可以使用。 * /
     "rewardRecipients": {
-        "n37vuNFkXfk15uFnGoVyHZ6PYQxppD3QqK": 1.5, //1.5% goes to pool op
-        "mirj3LtZxbSTharhtXvotqtJXUY7ki5qfx": 0.5, //0.5% goes to a pool co-owner
+        "n37vuNFkXfk15uFnGoVyHZ6PYQxppD3QqK": 1.5, //1.5% goes to pool op1.5 ％变为集中运
+        "mirj3LtZxbSTharhtXvotqtJXUY7ki5qfx": 0.5, //0.5% goes to a pool co-owner去到池共同拥有
 
-        //0.1% donation to NOMP to help support development
+        //0.1% donation to NOMP to help support development捐赠给NOMP帮助支持发展
         "22851477d63a085dbc2398c8430af1c09e7343f6": 0.1
     },
 
