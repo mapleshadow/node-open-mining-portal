@@ -4,49 +4,47 @@
     /* 指定日志输出的详细程度的级别。以外的任何指定的级别更塞弗里也将被记录。 */
     "logLevel": "debug", //or "warning", "error"
 
-
     /* The NOMP CLI (command-line interface) will listen for commands on this port. For example,
        blocknotify messages are sent to NOMP through this. */
-       / *该NOMP CLI（命令行接口）将监听此端口上命令。例如，
-       blocknotify消息通过此发送到NOMP 。 * /
+    /* 该 NOMP CLI（命令行接口）将监听此端口上命令。例如，
+       块通知消息通过此发送到 NOMP。*/
     "cliPort": 17117,
 
     /* By default 'forks' is set to "auto" which will spawn one process/fork/worker for each CPU
        core in your system. Each of these workers will run a separate instance of your pool(s),
        and the kernel will load balance miners using these forks. Optionally, the 'forks' field
        can be a number for how many forks will be spawned. */
-      / *默认情况下'叉'设置为“自动”，这将产生一个进程/前叉/工人为每个CPU
-       核心系统。这些工人将运行您的池（ S）的一个单独的实例，
-       和内核将使用加载这些叉平衡矿工。可选的， '叉'字段
-       可以是一个数字的多少叉将被催生。 * /
+    /* 默认情况下 '叉' 设置为 “自动”，这将产生一个 进程/叉/矿工为每个CPU核心系统。
+       这些矿工将运行你的矿池的一个单独的实例，
+       和内核将使用加载这些 叉 平衡矿工。可选的，'叉'字段
+       可以是一个数字的多少 叉 将被催生。*/
     "clustering": {
         "enabled": true,
         "forks": "auto"
     },
 
     /* This is the front-end. Its not finished. When it is finished, this comment will say so. */
-    / *这是前端。它没有完成。当它完成后，此评论将这么说。 * /
+    /* 这是前端。还没开发完成。完成后再修改解释。 */
     "website": {
         "enabled": true,
         "port": 80,
         /* Used for displaying stratum connection data on the Getting Started page. */
-        / *用于入门页面上显示地层连接数据。 * /
+        /* 用于入门页面上显示挖矿连接数据。 */
         "stratumHost": "cryppit.com",
         "stats": {
             /* Gather stats to broadcast to page viewers and store in redis for historical stats
                every this many seconds. */
-	      / *统计收集到广播到页面观众和存储在Redis的历史统计
-               每隔多少秒。 * /
-            "updateInterval": 15,
+            /* 统计收集到广播到页面观众和存储在 Redis 的历史统计，每隔多少秒。 */
+            "updateInterval": 60,
             /* How many seconds to hold onto historical stats. Currently set to 24 hours. */
-	    / *多少秒守住历史统计。目前设置为24小时。 * /
+            /* 多少秒守住历史统计。目前设置为24小时。 */
             "historicalRetention": 43200,
             /* How many seconds worth of shares should be gathered to generate hashrate. */
-	     / *多少秒钟的股份应聚集产生hashrate 。 * /
+            /* 多少秒钟的股份应聚集产生哈希。 */
             "hashrateWindow": 300
         },
         /* Not done yet. */
-	 / *尚未完成。 * /
+        /* 尚未完成。 */
         "adminCenter": {
             "enabled": true,
             "password": "password"
@@ -55,13 +53,12 @@
 
     /* Redis instance of where to store global portal data such as historical stats, proxy states,
        ect.. */
-        / *在哪里存储全球门户的数据，如历史统计，代理状态的Redis实例，
-       等.. * /
+    /* 在哪里存储全球门户的数据，如历史统计，代理状态的Redis实例，
+       等.. */
     "redis": {
         "host": "127.0.0.1",
         "port": 6379
     },
-
 
     /* With this switching configuration, you can setup ports that accept miners for work based on
        a specific algorithm instead of a specific coin. Miners that connect to these ports are
@@ -72,15 +69,9 @@
        Miners connecting to these switching ports must use their public key in the format of
        RIPEMD160(SHA256(public-key)). An address for each type of coin is derived from the miner's
        public key, and payments are sent to that address. */
-    / *使用此开关配置，可以设置端口接受的基础上工作的矿工
-       一个特定的算法，而不是一个特定的硬币。连接到这些端口矿工
-       自动切换由服务器决定的硬币。默认的硬币是第一
-       每种算法和硬币切换配置池可使用的触发
-       cli.js脚本中的脚本文件夹中。
-
-       连接到这些交换端口矿工必须使用自己的公钥格式
-       RIPEMD160 （ SHA256 （公钥） ） 。地址为每种类型的硬币是从矿工的衍生
-       公共密钥，而付款发送到该地址。 * /
+    /* 使用此开关配置，可以设置端口，接受基于特定算法，而不是一个特定的币工作的矿工。
+       连接到这些端口矿工自动切换由服务器决定的硬币。默认的硬币是每个算法和投币开关配置的第一个矿池可以使用脚本文件夹中的 cli.js 脚本被触发。
+       连接到这些交换端口矿工必须使用自己的公钥 RIPEMD160（SHA256（公钥））的格式。地址为每种类型的硬币是从矿工的公钥导出，付款发送到该地址。*/
     "switching": {
         "switch1": {
             "enabled": false,
@@ -132,5 +123,12 @@
         "usePoloniex": true,
         "useCryptsy": true,
         "useMintpal": true
+    },
+/* 不知道干嘛的 */
+    "redisBlockNotifyListener": {
+        "enabled": false,
+        "redisPort": 6379,
+        "redisHost": "hostname",
+        "psubscribeKey": "newblocks:*"
     }
 }
