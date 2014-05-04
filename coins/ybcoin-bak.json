@@ -1,0 +1,8 @@
+{
+    "name": "YBcoin",
+    "symbol": "YBC",
+    "algorithm": "scrypt-jane",
+    "chainStartTime": 1372386273,//默认值为xxxx，这个可以从源代码查到，你懂的
+    "nMin": 6, //defaults to 4 if not used 最小值，可不设置
+    "nMax": 32 //defaults to 30 if not used 最大值，可不设置
+}
