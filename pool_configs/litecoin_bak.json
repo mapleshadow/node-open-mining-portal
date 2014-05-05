@@ -1,4 +1,5 @@
 {
+    /* 是否启用该币该矿池 */
     "enabled": false,
 
     "coin": "litecoin.json",
@@ -8,31 +9,27 @@
     /* Block rewards go to the configured pool wallet address to later be paid out to miners,
        except for a percentages that can go to pool operator(s) as pool fees or donations.
        Addresses or hashed public keys can be used. */
-    / *块的奖励去配置的池钱包地址后支付给矿工，
+    /* 块奖励去配置的池钱包地址后支付给矿工，
         除了一个百分比可以去游泳池运算符（ s）表示，由于池费或捐款。
-      地址或散列公钥都可以使用。 * /
+      地址或散列公钥都可以使用。 */
     "rewardRecipients": {
         "n37vuNFkXfk15uFnGoVyHZ6PYQxppD3QqK": 1.5, //1.5% goes to pool op1.5 ％变为集中运
-        "mirj3LtZxbSTharhtXvotqtJXUY7ki5qfx": 0.5, //0.5% goes to a pool co-owner去到池共同拥有
-
-        //0.1% donation to NOMP to help support development捐赠给NOMP帮助支持发展
-        "22851477d63a085dbc2398c8430af1c09e7343f6": 0.1
+        "mirj3LtZxbSTharhtXvotqtJXUY7ki5qfx": 0.5, //0.5% goes to a pool co-owner 去到池共同拥有
+        "22851477d63a085dbc2398c8430af1c09e7343f6": 0.1 //0.1% donation to NOMP to help support development 捐赠给NOMP帮助支持发展
     },
 
-    "blockRefreshInterval": 1000, //How often to poll RPC daemons for new blocks, in milliseconds多久轮询的RPC守护进程的新区块，以毫秒为单位
+     /* 多久轮询的RPC守护进程的新区块，以毫秒为单位 */
+    "blockRefreshInterval": 1000, //How often to poll RPC daemons for new blocks, in milliseconds
 
     /* How many milliseconds should have passed before new block transactions will trigger a new
        job broadcast. */
-     / *多少毫秒须通过之前，新的块交易将引发新
-       就业播出。 * /
+    /* 多少毫秒须通过之前，新的块交易将引发新就业播出。 */
     "txRefreshInterval": 20000,
 
     /* Some miner apps will consider the pool dead/offline if it doesn't receive anything new jobs
        for around a minute, so every time we broadcast jobs, set a timeout to rebroadcast
        in this many seconds unless we find a new job. Set to zero or remove to disable this. */
-        / *一些矿工的应用程序将考虑池死/脱机如果没有收到任何新的就业机会
-       大约一分钟的时间，所以我们每次播出工作时间，设置超时重播
-       在这么多秒，除非我们找到新的工作。设置为零或删除禁用此。 * /
+    /* 一些矿工的应用程序将考虑池死/脱机如果没有收到任何新的就业机会大约一分钟的时间，所以我们每次播出工作时间，设置超时重播在这么多秒，除非我们找到新的工作。设置为零或删除禁用此。 */
     "jobRebroadcastTimeout": 55,
 
     //instanceId: 37, //Recommend not using this because a crypto-random one will be generated不推荐使用，因为一个加密的随机人会产生
@@ -40,73 +37,60 @@
     /* Some attackers will create thousands of workers that use up all available socket connections,
        usually the workers are zombies and don't submit shares after connecting. This features
        detects those and disconnects them. */
-        / *一些攻击者将创造数千个使用了所有可用的套接字连接的工人，
-       通常工人僵尸和不连接后提交股。此功能
-       这些检测并断开它们。 * /
-    "connectionTimeout": 600, //Remove workers that haven't been in contact for this many seconds / /删除那些没有接触过如此多秒数工人
+    /* 一些攻击者将创造数千个使用了所有可用的套接字连接的工人，通常工人僵尸和不连接后提交股。此功能这些检测并断开它们。 */
+    "connectionTimeout": 600, //Remove workers that haven't been in contact for this many seconds 删除那些没有接触过如此多秒数工人
 
     /* Sometimes you want the block hashes even for shares that aren't block candidates. */
-    / *有时候你想要的块哈希甚至股份未阻止候选人。 * /
+    /* 有时候你想要的块哈希甚至股份未阻止候选人。 */
     "emitInvalidBlockHashes": false,
 
     /* We use proper maximum algorithm difficulties found in the coin daemon source code. Most
        miners/pools that deal with scrypt use a guesstimated one that is about 5.86% off from the
        actual one. So here we can set a tolerable threshold for if a share is slightly too low
        due to mining apps using incorrect max diffs and this pool using correct max diffs. */
-       / *我们使用硬币守护程序的源代码中找到合适的算法的最大困难。最
-       矿工/池的处理scrypt使用粗略估计一个是从约5.86折
-       实际之一。所以在这里我们可以设置一个容忍的阈值，如果A股是稍微有点低
-       由于使用不正确的最大差别，这池使用正确的最大差别挖掘应用程序。 * /
+    /* 我们使用硬币守护程序的源代码中找到合适的算法的最大困难。最矿工/池的处理scrypt使用粗略估计一个是从约5.86% 实际之一。所以在这里我们可以设置一个容忍的阈值，如果A股是稍微有点低由于使用不正确的最大差别，这池使用正确的最大差别挖掘应用程序。 */
     "shareVariancePercent": 10,
 
     /* Enable for client IP addresses to be detected when using a load balancer with TCP proxy
        protocol enabled, such as HAProxy with 'send-proxy' param:
        http://haproxy.1wt.eu/download/1.5/doc/configuration.txt */
-        / *启用使用与TCP代理负载均衡器时被检测到客户端的IP地址
-       协议启用，比如HAProxy的用'发送代理'参数：
-       http://haproxy.1wt.eu/download/1.5/doc/configuration.txt * /
+    /* 启用使用与TCP代理负载均衡器时被检测到客户端的IP地址协议启用，比如HAProxy的用'发送代理'参数：http://haproxy.1wt.eu/download/1.5/doc/configuration.txt */
     "tcpProxyProtocol": false,
 
     /* If a worker is submitting a high threshold of invalid shares we can temporarily ban their IP
        to reduce system/network load. Also useful to fight against flooding attacks. If running
        behind something like HAProxy be sure to enable 'tcpProxyProtocol', otherwise you'll end up
        banning your own IP address (and therefore all workers). */
-       / *如果一个工人正在提交无效股很高的门槛，我们可以暂时禁止其IP
-       降低系统/网络负载。也有用对抗洪水攻击作战。如果运行
-       后面像HAProxy的一定要启用“ tcpProxyProtocol '，否则你会最终
-       禁止自己的IP地址（因此所有工人） 。 * /
+    /* 如果一个工人正在提交无效股很高的门槛，我们可以暂时禁止其IP降低系统/网络负载。也有用对抗洪水攻击作战。如果运行后面像HAProxy的一定要启用“ tcpProxyProtocol '，否则你会最终禁止自己的IP地址（因此所有工人）。 */
     "banning": {
         "enabled": true,
-        "time": 600, //How many seconds to ban worker for多少秒，禁止工作者
-        "invalidPercent": 50, //What percent of invalid shares triggers ban什么％的股份无效，禁止触发
-        "checkThreshold": 500, //Check invalid percent when this many shares have been submitted检查无效的百分比已提交这么多的股份时，已
-        "purgeInterval": 300 //Every this many seconds clear out the list of old bans每多少秒清除旧的禁令名单
+        "time": 600, //How many seconds to ban worker for 多少秒，禁止工作者
+        "invalidPercent": 50, //What percent of invalid shares triggers ban什么 ％的股份无效，则触发禁止
+        "checkThreshold": 500, //Check invalid percent when this many shares have been submitted 检查无效的百分比已提交这么多的股份时，已
+        "purgeInterval": 300 //Every this many seconds clear out the list of old bans 每多少秒清除旧的禁令名单
     },
 
     /* Each pool can have as many ports for your miners to connect to as you wish. Each port can
        be configured to use its own pool difficulty and variable difficulty settings. varDiff is
        optional and will only be used for the ports you configure it for. */
-        / *每个池可以有多个端口为您的矿工连接到如你所愿。每个端口可以
-       被配置为使用自己的游泳池难度和变数难度设置。 VARDIFF是
-       可选的，将只用于配置它的端口。 * /
+    /* 每个池可以有多个端口为您的矿工连接到如你所愿。每个端口可以被配置为使用自己的游泳池难度和变数难度设置。VARDIFF是可选的，将只用于配置它的端口。 */
     "ports": {
         "3032": { //A port for your miners to connect to A端口的矿工连接到
-            "diff": 32, //the pool difficulty for this port泳池困难这个端口
+            "diff": 32, //the pool difficulty for this port 该矿池端口难度
 
             /* Variable difficulty is a feature that will automatically adjust difficulty for
                individual miners based on their hashrate in order to lower networking overhead */
-	        / *变量的难度是一项功能，会自动调整难度
-               基于其hashrate以降低网络开销个别矿工* /
+            /* 变量的难度是一项功能，会自动调整难度基于其哈希率以降低网络开销个别矿工 */
             "varDiff": {
-                "minDiff": 8, //Minimum difficulty最小困难
-                "maxDiff": 512, //Network difficulty will be used if it is lower than this网络难度会如果它低于此使用
+                "minDiff": 8, //Minimum difficulty最小难度
+                "maxDiff": 512, //Network difficulty will be used if it is lower than this 网络难度会如果它低于此使用
                 "targetTime": 15, //Try to get 1 share per this many seconds试着让每多少秒1股
-                "retargetTime": 90, //Check to see if we should retarget every this many seconds检查我们是否应该重新定位每隔多少秒
-                "variancePercent": 30 //Allow time to very this % from target without retargeting/允许时间极本％的目标没有重定向
+                "retargetTime": 90, //Check to see if we should retarget every this many seconds 检查我们是否应该重新定位每隔多少秒
+                "variancePercent": 30 //Allow time to very this % from target without retargeting 允许时间极本％的目标没有重定向
             }
         },
-        "3256": { //Another port for your miners to connect to, this port does not use varDiff另外一个端口，您的矿工要连接到该端口不使用VARDIFF
-            "diff": 256 //The pool difficulty/池难度
+        "3256": { //Another port for your miners to connect to, this port does not use varDiff 另外一个端口，您的矿工要连接到该端口不使用VARDIFF
+            "diff": 256 //The pool difficulty 池难度
         }
     },
 
@@ -117,11 +101,7 @@
        RPC config. For more info on this see:
           - https://en.bitcoin.it/wiki/Data_directory
           - https://en.bitcoin.it/wiki/Running_bitcoind */
-        / *推荐有在运行的情况下，至少有两个守护进程实例1滴出不同步
-       或脱机。为了实现冗余，所有的实例都将被轮询块/事务更新
-       和用于提交块。创建备份精灵涉及生成一个守护进程
-       使用“- DATADIR = /备份”参数，它与它自己创建一个新的守护进程实例
-       RPC配置。关于此查看更多资讯：
+    /* 推荐有在运行的情况下，至少有两个守护进程实例1滴出不同步或脱机。为了实现冗余，所有的实例都将被轮询块/事务更新和用于提交块。创建备份精灵涉及生成一个守护进程使用“- DATADIR = /备份”参数，它与它自己创建一个新的守护进程实例RPC配置。关于此查看更多资讯：
            - https://en.bitcoin.it/wiki/Data_directory
            - https://en.bitcoin.it/wiki/Running_bitcoind * /
     "daemons": [
@@ -139,30 +119,21 @@
         }
     ],
 
-
     /* This allows the pool to connect to the daemon as a node peer to receive block updates.
        It may be the most efficient way to get block updates (faster than polling, less
        intensive than blocknotify script). It requires the additional field "peerMagic" in
        the coin config. */
-       / *这使得池连接到后台程序作为节点对接收模块的更新。
-       它可能是最有效的方式来获得块的更新（不是轮询更快，更
-       密集的比blocknotify脚本） 。这需要在附加字段“ peerMagic ”
-       硬币的配置。 * /
+    /* 这使得池连接到后台程序作为节点对接收模块的更新。它可能是最有效的方式来获得块的更新（不是轮询更快，更密集的比blocknotify脚本）。这需要在附加字段“ peerMagic ”硬币的配置。 */
     "p2p": {
         "enabled": false,
-
-        /* Host for daemon */ / *主机的守护进程* /
+        /* Host for daemon 主机的守护进程IP */
         "host": "127.0.0.1",
-
-        /* Port configured for daemon (this is the actual peer port not RPC port) */ / *端口配置的守护进程（这是实际的对等端口不是RPC端口） * /
+        /* Port configured for daemon (this is the actual peer port not RPC port) 端口配置的守护进程（这是实际的对等端口不是RPC端口） */
         "port": 19333,
-
         /* If your coin daemon is new enough (i.e. not a shitcoin) then it will support a p2p
            feature that prevents the daemon from spamming our peer node with unnecessary
            transaction data. Assume its supported but if you have problems try disabling it. */
-	    / *如果你的硬币守护程序是足够新（即不是shitcoin ），那么它会支持一个p2p
-           功能，防止守护进程滥用我们的对等节点不必要的
-           交易数据。假设它的支持，但如果你有问题尝试禁用它。 * /
+        /* 如果你的硬币守护程序是足够新（即不是shitcoin ），那么它会支持一个p2p功能，防止守护进程滥用我们的对等节点不必要的交易数据。假设它的支持，但如果你有问题尝试禁用它。 */
         "disableTransactions": true
     }
 
