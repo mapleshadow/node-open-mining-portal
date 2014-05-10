@@ -3,6 +3,7 @@
        will also be logged. */
     /* 指定日志输出的详细程度的级别。以外的任何指定的级别更塞弗里也将被记录。 */
     "logLevel": "debug", //or "warning", "error"
+    "logColors": true,
 
     /* The NOMP CLI (command-line interface) will listen for commands on this port. For example,
        blocknotify messages are sent to NOMP through this. */
@@ -23,10 +24,31 @@
         "forks": "auto"
     },
 
+    "defaultPoolConfigs": {
+        "blockRefreshInterval": 1000,
+        "jobRebroadcastTimeout": 55,
+        "connectionTimeout": 600,
+        "emitInvalidBlockHashes": false,
+        "validateWorkerUsername": true,
+        "tcpProxyProtocol": false,
+        "banning": {
+            "enabled": true,
+            "time": 600,
+            "invalidPercent": 50,
+            "checkThreshold": 500,
+            "purgeInterval": 300
+        },
+        "redis": {
+            "host": "127.0.0.1",
+            "port": 6379
+        }
+    },
+
     /* This is the front-end. Its not finished. When it is finished, this comment will say so. */
     /* 这是前端。还没开发完成。完成后再修改解释。 */
     "website": {
         "enabled": true,
+        "host": "0.0.0.0",
         "port": 80,
         /* Used for displaying stratum connection data on the Getting Started page. */
         /* 用于入门页面上显示挖矿连接数据。 */
@@ -115,7 +137,7 @@
             }
         }
     },
-/* 不知道干嘛的 */
+/* 貌似是是否开启自动支持的交易市场最新收益而进行自动切换 */
     "profitSwitch": {
         "enabled": false,
         "updateInterval": 600,
@@ -123,12 +145,5 @@
         "usePoloniex": true,
         "useCryptsy": true,
         "useMintpal": true
-    },
-/* 不知道干嘛的 */
-    "redisBlockNotifyListener": {
-        "enabled": false,
-        "redisPort": 6379,
-        "redisHost": "hostname",
-        "psubscribeKey": "newblocks:*"
     }
 }
