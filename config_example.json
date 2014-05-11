@@ -47,12 +47,12 @@
     /* This is the front-end. Its not finished. When it is finished, this comment will say so. */
     /* 这是前端。还没开发完成。完成后再修改解释。 */
     "website": {
-        "enabled": true,
+        "enabled": false,//or "true"
         "host": "0.0.0.0",
         "port": 80,
         /* Used for displaying stratum connection data on the Getting Started page. */
         /* 用于入门页面上显示挖矿连接数据。 */
-        "stratumHost": "cryppit.com",
+        "stratumHost": "cryppit.com",// or localhost
         "stats": {
             /* Gather stats to broadcast to page viewers and store in redis for historical stats
                every this many seconds. */
