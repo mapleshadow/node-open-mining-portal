@@ -1,0 +1,9 @@
+{
+    "name": "limecoin",
+    "symbol": "LIM",
+    "algorithm": "x11",
+    "mposDiffMultiplier": 256,
+    "peerMagic": "fbc0b6db",
+    "peerMagicTestnet": "fcc1b7dc"
+}
+
