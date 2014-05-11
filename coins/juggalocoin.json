@@ -1,0 +1,8 @@
+{
+    "name": "juggalocoin",
+    "symbol": "JUG",
+    "algorithm": "x11",
+    "mposDiffMultiplier": 256,
+    "peerMagic": "fec3b9de",
+    "peerMagicTestnet": "fec4bade"
+}
