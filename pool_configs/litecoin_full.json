@@ -42,7 +42,7 @@
                 "minDiff": 8,
                 "maxDiff": 512,
                 "targetTime": 15,
-                "retargetTime": 90,
+                "retargetTime": 120,//90是NOMP默认120是ST默认
                 "variancePercent": 30
             }
         },
