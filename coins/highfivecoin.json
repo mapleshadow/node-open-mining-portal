@@ -1,0 +1,8 @@
+{
+    "name": "highfivecoin",
+    "symbol": "H5C",
+    "algorithm": "x11",
+    "mposDiffMultiplier": 256,
+    "peerMagic": "fdc0b8de",
+    "peerMagicTestnet": "fec4bade"
+}
