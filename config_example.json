@@ -24,20 +24,44 @@
         "forks": "auto"
     },
 
+/* Pool config file will inherit these default values if they are not set. */
+/*如果他们不设置池的配置文件将继承这些默认值。 */
     "defaultPoolConfigs": {
+/* Poll RPC daemons for new blocks every this many milliseconds. */
+/* 轮询RPC守护程序为新的每块这么多毫秒。 */
         "blockRefreshInterval": 1000,
+/* If no new blocks are available for this many seconds update and rebroadcast job. */
+/* 如果没有新的块可用于多少秒更新和转播工作。 */
         "jobRebroadcastTimeout": 55,
+/* Disconnect workers that haven't submitted shares for this many seconds. */
+/* 没有提交股如此多秒数断开工人。 */
         "connectionTimeout": 600,
+/* (For MPOS mode) Store the block hashes for shares that aren't block candidates. */
+/* （对于MPOS模式）存储块哈希股份未阻止候选人。 */
         "emitInvalidBlockHashes": false,
+/* This option will only authenticate miners using an address or mining key. */
+/* 使用地址或采矿键，此选项只会验证矿工。 */
         "validateWorkerUsername": true,
+/* Enable for client IP addresses to be detected when using a load balancer with TCP
+           proxy protocol enabled, such as HAProxy with 'send-proxy' param:
+           http://haproxy.1wt.eu/download/1.5/doc/configuration.txt */
+/* 启用使用一个TCP负载平衡器时被检测到客户端的IP地址代理协议启用，比如HAProxy的用'发送代理'参数：
+           http://haproxy.1wt.eu/download/1.5/doc/configuration.txt */
         "tcpProxyProtocol": false,
+        /* If under low-diff share attack we can ban their IP to reduce system/network load. If
+           running behind HAProxy be sure to enable 'tcpProxyProtocol', otherwise you'll end up
+           banning your own IP address (and therefore all workers). */
+/* 如果在低差异份额攻击，我们可以禁止其IP ，以降低系统/网络负载。如果运行背后HAProxy的一定要启用“ tcpProxyProtocol '，否则你会最终
+           禁止自己的IP地址（因此所有工人） 。 */
         "banning": {
             "enabled": true,
-            "time": 600,
-            "invalidPercent": 50,
-            "checkThreshold": 500,
-            "purgeInterval": 300
+            "time": 600, //How many seconds to ban worker for多少秒，禁止工作者
+            "invalidPercent": 50, //What percent of invalid shares triggers ban什么％的股份无效，禁止触发
+            "checkThreshold": 500, //Perform check when this many shares have been submitted已提交这么多的股份时，已执行检查
+            "purgeInterval": 300 //Every this many seconds clear out the list of old bans每多少秒清除旧的禁令名单
         },
+/* Used for storing share and block submission data and payment processing. */
+/* 用于存储共享和阻止提交数据和支付处理。 */
         "redis": {
             "host": "127.0.0.1",
             "port": 6379
