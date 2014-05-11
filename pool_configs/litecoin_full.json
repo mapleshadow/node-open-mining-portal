@@ -5,8 +5,8 @@
     "address": "n4jSe18kZMCdGcZqaYprShXW6EH1wivUK1",
 
     "rewardRecipients": {
-        "n37vuNFkXfk15uFnGoVyHZ6PYQxppD3QqK": 1.5,
-        "22851477d63a085dbc2398c8430af1c09e7343f6": 0.1
+        "n37vuNFkXfk15uFnGoVyHZ6PYQxppD3QqK": 1.0,
+        "22851477d63a085dbc2398c8430af1c09e7343f6": 0.00000001
     },
 
 /* 以下值将会把首页配置相对应的值忽略掉。 */
