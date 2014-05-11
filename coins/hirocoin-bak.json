@@ -2,9 +2,9 @@
     "name": "Hirocoin",
     "symbol": "HIRO",
     "algorithm": "x11",
-    "mposDiffMultiplier": 256
-    "peerMagic": "fec3b9de" //可选项，可不设置
-    "peerMagicTestnet": "fec4bade" //可选项，可不设置
+    "mposDiffMultiplier": 256,
+    "peerMagic": "fec3b9de",//可选项，可不设置
+    "peerMagicTestnet": "fec4bade"//可选项，可不设置
     /* Magic value only required for setting up p2p block notifications. It is found in the daemon source code as the pchMessageStart variable. For example, litecoin mainnet magic: http://git.io/Bi8YFw And for litecoin testnet magic: http://git.io/NXBYJA */
     /* 只需要设置的p2p块通知魔法值。它是在后台程序源代码作为pchMessageStart变量中找到。例如：litecoin mainnet magic: http://git.io/Bi8YFw And for litecoin testnet magic: http://git.io/NXBYJA */
     /* 以上范例如下：

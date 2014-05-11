@@ -1,0 +1,8 @@
+{
+    "name": "Europecoin",
+    "symbol": "ERC",
+    "algorithm": "x11",
+    "mposDiffMultiplier": 256,
+    "peerMagic": "4555524f",//可选项，可不设置
+    "peerMagicTestnet": "4f525545"//可选项，可不设置
+}
