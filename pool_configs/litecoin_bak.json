@@ -10,7 +10,7 @@
     },
 
     "paymentProcessing": {
-        "enabled": true,
+        "enabled": true,//false true
         "paymentInterval": 20,
         "minimumPayment": 70,
         "daemon": {

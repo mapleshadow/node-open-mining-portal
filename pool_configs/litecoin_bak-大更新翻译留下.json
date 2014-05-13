@@ -53,8 +53,9 @@
 
     "validateWorkerUsername": true,
     /* 支付进程 */
+    /* 警告！！！如果你用MPOS作为前台模式，这个一定要关闭！false，否则就会重复分币导致MPOS报错！ */
     "paymentProcessing": {
-        "enabled": true,
+        "enabled": true,//false true
         "paymentInterval": 20,
         "minimumPayment": 70,
         "daemon": {

@@ -19,9 +19,9 @@
     "connectionTimeout": 600,
 
 /* 以上值将会把首页配置相对应的值忽略掉。 */
-
+    /* 警告！！！如果你用MPOS作为前台模式，这个一定要关闭！false，否则就会重复分币导致MPOS报错！ */
     "paymentProcessing": {
-        "enabled": true,
+        "enabled": true,//false true
         "paymentInterval": 20,
         "minimumPayment": 70,
         "daemon": {
