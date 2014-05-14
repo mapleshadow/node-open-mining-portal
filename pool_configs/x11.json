@@ -23,12 +23,12 @@
 
     "ports": {
         "3008": {
-            "diff": 0.004,
+            "diff": 0.001,//0.001 0.00116 0.004
             "varDiff": {
-                "minDiff": 0.008,
-                "maxDiff": 0.08,
+                "minDiff": 0.001,//0.001 0.00116 0.004 0.008 0.0001
+                "maxDiff": 0.10,//0.08 0.10
                 "targetTime": 15,
-                "retargetTime": 120,//90是NOMP默认120是ST默认
+                "retargetTime": 90,//90 nomp 120 st
                 "variancePercent": 30
             }
         }
