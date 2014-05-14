@@ -1,0 +1,8 @@
+{
+    "name": "quebecoin",
+    "symbol": "QBC",
+    "algorithm": "x11",
+    "mposDiffMultiplier": 256,
+    "peerMagic": "d3edc9f1",
+    "peerMagicTestnet": "d3edc9f1"
+}
