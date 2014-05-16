@@ -1,5 +1,5 @@
 {
-    "name": "quebecoin",
+    "name": "Quebecoin",
     "symbol": "QBC",
     "algorithm": "x11",
     "mposDiffMultiplier": 256,
