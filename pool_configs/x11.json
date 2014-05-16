@@ -1,5 +1,5 @@
 {
-    "enabled": false,
+    "enabled": false,//true false
     "coin": "litecoin.json",
 
     "address": "n4jSe18kZMCdGcZqaYprShXW6EH1wivUK1",

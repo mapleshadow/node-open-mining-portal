@@ -1,6 +1,6 @@
 {
     /* 是否启用该币该矿池 */
-    "enabled": false,
+    "enabled": false,//true false
     "coin": "litecoin.json",
 
     "address": "n4jSe18kZMCdGcZqaYprShXW6EH1wivUK1", //币钱包地址
@@ -39,9 +39,9 @@
 /* X11 如果单一个算法，那么其他端口可以删除掉，但是必须存在最大最小难度否则挖不到块！！！如范例
 "ports": {
         "3393": {
-            "diff": 0.001,//0.001 0.00116 0.004  官方回复说可以0.0001？
+            "diff": 0.00116,//0.001 0.00116 0.004  官方回复说可以0.0001？
             "varDiff": {
-                "minDiff": 0.001,//0.001 0.00116 0.004 0.008 0.0001
+                "minDiff": 0.00116,//0.001 0.00116 0.004 0.008 0.0001
                 "maxDiff": 0.10,//0.08 0.10
                 "targetTime": 15,
                 "retargetTime": 120,//90 nomp 120 st

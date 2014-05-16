@@ -1,6 +1,6 @@
 {
     /* 是否启用该币该矿池 */
-    "enabled": false,
+    "enabled": false,//true false
     "coin": "litecoin.json",
 
     "address": "n4jSe18kZMCdGcZqaYprShXW6EH1wivUK1", //币钱包地址
