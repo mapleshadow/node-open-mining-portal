@@ -1,0 +1,8 @@
+{
+    "name": "caix",
+    "symbol": "CAIx",
+    "algorithm": "x11",
+    "mposDiffMultiplier": 256,
+    "peerMagic": "70352205",
+    "peerMagicTestnet": "cdf3c1df"
+}
