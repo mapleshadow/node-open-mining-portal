@@ -1,13 +1,15 @@
 {
     "enabled": false,//true false
-    "coin": "litecoin.json",
+    "coin": "darkcoin.json",
 
     "address": "n4jSe18kZMCdGcZqaYprShXW6EH1wivUK1",
 
     "rewardRecipients": {
-        "n37vuNFkXfk15uFnGoVyHZ6PYQxppD3QqK": 1.5,
-        "22851477d63a085dbc2398c8430af1c09e7343f6": 0.1
+        "n37vuNFkXfk15uFnGoVyHZ6PYQxppD3QqK": 0,//可以是我的地址
+        "22851477d63a085dbc2398c8430af1c09e7343f6": 0.0//可以删掉
     },
+
+//其实这里有一个自带支付，被我删除了！因为MPOS已经有支付功能了！
 
     "ports": {
         "3008": {
@@ -22,7 +24,7 @@
         }
     },
 
-    "daemons": [
+    "daemons": [//主守护进程，目前总是未知块观察下，实在不行再考虑加备用钱包服务器
         {
             "host": "127.0.0.1",
             "port": 19332,
@@ -39,7 +41,7 @@
     },
 
     "mposMode": {
-        "enabled": false,//true false 如果用MPOS模式就要开启
+        "enabled": true,//true false 如果用MPOS模式就要开启
         "host": "127.0.0.1",
         "port": 3306,
         "user": "me",
