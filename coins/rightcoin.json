@@ -1,0 +1,6 @@
+{
+    "name": "Rightcoin",
+    "symbol": "RTC",
+    "algorithm": "x11",
+    "mposDiffMultiplier": 256
+}

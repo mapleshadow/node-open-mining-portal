@@ -1,0 +1,6 @@
+{
+    "name": "Givecoin",
+    "symbol": "GIVE",
+    "algorithm": "x11",
+    "mposDiffMultiplier": 256
+}
