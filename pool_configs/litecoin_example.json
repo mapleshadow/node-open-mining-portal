@@ -83,6 +83,12 @@
             "port": 19332,
             "user": "testuser",
             "password": "testpass"
+        },
+        {   //Backup daemon instance 备用守护进程TMD麻烦的一逼，如果没有很容易报错我日
+            "host": "127.0.0.1",
+            "port": 19344,
+            "user": "litecoinrpc",
+            "password": "testnet"
         }
     ],
 
