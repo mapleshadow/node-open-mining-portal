@@ -2,5 +2,6 @@
     "name": "Givecoin",
     "symbol": "GIVE",
     "algorithm": "x11",
+    "txMessages": false, //optional - defaults to false,
     "mposDiffMultiplier": 256
 }

@@ -3,6 +3,7 @@
     "symbol": "CC",
     "algorithm": "x11",
     "mposDiffMultiplier": 256,
+    "txMessages": false, //optional - defaults to false,
     "peerMagic": "dbadbdda",
     "peerMagicTestnet": "dd4ddd4d"
 }

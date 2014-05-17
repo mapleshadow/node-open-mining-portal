@@ -3,6 +3,7 @@
     "symbol": "H5C",
     "algorithm": "x11",
     "mposDiffMultiplier": 256,
+    "txMessages": false, //optional - defaults to false,
     "peerMagic": "fdc0b8de",
     "peerMagicTestnet": "fec4bade"
 }

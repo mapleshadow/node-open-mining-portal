@@ -2,5 +2,6 @@
     "name": "Wildwestcoin",
     "symbol": "WEST",
     "algorithm": "x11",
+    "txMessages": false, //optional - defaults to false,
     "mposDiffMultiplier": 256
 }

@@ -3,6 +3,7 @@
     "symbol": "LIM",
     "algorithm": "x11",
     "mposDiffMultiplier": 256,
+    "txMessages": false, //optional - defaults to false,
     "peerMagic": "fbc0b6db",
     "peerMagicTestnet": "fcc1b7dc"
 }

@@ -3,6 +3,7 @@
     "symbol": "LGC",
     "algorithm": "x11",
     "mposDiffMultiplier": 256,
+    "txMessages": false, //optional - defaults to false,
     "peerMagic": "f6c6b6d6",
     "peerMagicTestnet": "ffcfb9d3"
 }

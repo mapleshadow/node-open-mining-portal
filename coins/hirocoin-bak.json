@@ -3,6 +3,7 @@
     "symbol": "HIRO",
     "algorithm": "x11",
     "mposDiffMultiplier": 256,
+    "txMessages": false, //optional - defaults to false,
     "peerMagic": "fec3b9de",//可选项，可不设置
     "peerMagicTestnet": "fec4bade"//可选项，可不设置
     /* Magic value only required for setting up p2p block notifications. It is found in the daemon source code as the pchMessageStart variable. For example, litecoin mainnet magic: http://git.io/Bi8YFw And for litecoin testnet magic: http://git.io/NXBYJA */
