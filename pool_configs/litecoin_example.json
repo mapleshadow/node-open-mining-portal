@@ -118,7 +118,7 @@
         "password": "mypass",
         "database": "ltc",
         "checkPassword": true,
-        "autoCreateWorker": false
+        "autoCreateWorker": true//true false
     }
 
 }
