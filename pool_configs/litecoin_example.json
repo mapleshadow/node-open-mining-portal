@@ -118,7 +118,7 @@
         "password": "mypass",
         "database": "ltc",
         "checkPassword": true,
-        "autoCreateWorker": true//true false
+        "autoCreateWorker": true//true false MPOS模式必须开，否则会显示块 未知！
     }
 
 }
