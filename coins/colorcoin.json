@@ -1,6 +1,6 @@
 {
     "name": "Colorcoin",
-    "symbol": "COC",
+    "symbol": "CC",
     "algorithm": "x11",
     "mposDiffMultiplier": 256,
     "peerMagic": "dbadbdda",

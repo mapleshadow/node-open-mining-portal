@@ -2,7 +2,7 @@
     "name": "Logicoin",
     "symbol": "LGC",
     "algorithm": "x11",
-    "mposDiffMultiplier": 256
+    "mposDiffMultiplier": 256,
     "peerMagic": "f6c6b6d6",
     "peerMagicTestnet": "ffcfb9d3"
 }
