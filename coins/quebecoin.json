@@ -3,6 +3,7 @@
     "symbol": "QBC",
     "algorithm": "x11",
     "mposDiffMultiplier": 256,
+    "txMessages": false, //optional - defaults to false,
     "peerMagic": "d3edc9f1",
     "peerMagicTestnet": "d3edc9f1"
 }
