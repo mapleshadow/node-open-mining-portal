@@ -10,7 +10,7 @@
     },
 
     "paymentProcessing": {
-        "enabled": false,//true false 如果用MPOS模式就要关闭
+        "enabled": false,//true false 如果用MPOS模式就要关闭 TMD又有说法要开，奇葩啊。。。。。。。。。
         "paymentInterval": 20,
         "minimumPayment": 70,
         "daemon": {
