@@ -1,0 +1,7 @@
+{
+    "name": "Dreamcoin",
+    "symbol": "DRM",
+    "algorithm": "x11",
+    "txMessages": false, //optional - defaults to false,
+    "mposDiffMultiplier": 256
+}
