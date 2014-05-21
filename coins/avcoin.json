@@ -1,6 +1,6 @@
 {
-    "name": "Dreamcoin",
-    "symbol": "DRM",
+    "name": "Avcoin",
+    "symbol": "AV",
     "algorithm": "x11",
     "txMessages": false, //optional - defaults to false,
     "mposDiffMultiplier": 256
