@@ -1,9 +1,0 @@
-{
-    "name": "Europecoin",
-    "symbol": "ERC",
-    "algorithm": "x11",
-    "mposDiffMultiplier": 256,
-    "txMessages": false, //optional - defaults to false,
-    "peerMagic": "4555524f",
-    "peerMagicTestnet": "4f525545"
-}
