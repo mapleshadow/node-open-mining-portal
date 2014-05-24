@@ -1,6 +1,6 @@
 {
-    "name": "Bankcoin",
-    "symbol": "BANK",
+    "name": "Beecoinv2",
+    "symbol": "BEE2",
     "algorithm": "x11",
     "txMessages": false, //optional - defaults to false,
     "mposDiffMultiplier": 256
