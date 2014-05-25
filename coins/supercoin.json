@@ -1,6 +1,6 @@
 {
-    "name": "Syncoin",
-    "symbol": "SYNC",
+    "name": "Supercoin",
+    "symbol": "SUPER",
     "algorithm": "x11",
     "txMessages": false, //optional - defaults to false,
     "mposDiffMultiplier": 256
