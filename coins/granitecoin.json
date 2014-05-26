@@ -1,0 +1,9 @@
+{
+    "name": "Granitecoin",
+    "symbol": "GRN",
+    "algorithm": "x11",
+    "mposDiffMultiplier": 256,
+    "txMessages": false //optional - defaults to false,
+    //"peerMagic": "70352205",
+    //"peerMagicTestnet": "cdf3c1df"
+}
