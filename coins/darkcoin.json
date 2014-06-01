@@ -2,6 +2,5 @@
     "name": "Darkcoin",
     "symbol": "DRK",
     "algorithm": "x11",
-    "txMessages": false, //optional - defaults to false,
     "mposDiffMultiplier": 256
 }
