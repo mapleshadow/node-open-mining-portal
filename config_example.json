@@ -165,9 +165,9 @@
                     "diff": 0.0019532,//0.001 0.00116 0.004
                     "varDiff": {
                         "minDiff": 0.00116,//0.001 0.00116 0.004 0.008
-                        "maxDiff": 0.10,//0.008 0.10
+                        "maxDiff": 256,//0.008 0.10 256 1
                         "targetTime": 15,
-                        "retargetTime": 120,//90 120
+                        "retargetTime": 60,//90 120 60
                        "variancePercent": 30
                     }
                 }
@@ -181,6 +181,7 @@
         "depth": 0.90,
         "usePoloniex": true,
         "useCryptsy": true,
-        "useMintpal": true
+        "useMintpal": true,
+        "useBittrex": true
     }
 }

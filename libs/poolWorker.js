@@ -202,6 +202,9 @@ module.exports = function(logger){
             logger[severity](logSystem, logComponent, logSubCat, text);
         }).on('banIP', function(ip, worker){
             process.send({type: 'banIP', ip: ip});
+        //修复X11难度切换，如果开启了币切换模式的话，配置文件内配置
+        }).on('started', function(){
+            _this.setDifficultyForProxyPort(pool, poolOptions.coin.name, poolOptions.coin.algorithm);
         });
 
         pool.start();
@@ -259,17 +262,6 @@ module.exports = function(logger){
                 };
 
 
-                Object.keys(pools).forEach(function (coinName) {
-                    var p = pools[coinName];
-                    if (poolConfigs[coinName].coin.algorithm === algorithm) {
-                        for (var port in portalConfig.switching[switchName].ports) {
-                            if (portalConfig.switching[switchName].ports[port].varDiff)
-                                p.setVarDiff(port, portalConfig.switching[switchName].ports[port].varDiff);
-                        }
-                    }
-                });
-
-
                 Object.keys(proxySwitch[switchName].ports).forEach(function(port){
                     var f = net.createServer(function(socket) {
                         var currentPool = proxySwitch[switchName].currentPool;
@@ -278,8 +270,11 @@ module.exports = function(logger){
                             + switchName + ' from '
                             + socket.remoteAddress + ' on '
                             + port + ' routing to ' + currentPool);
-
-                        pools[currentPool].getStratumServer().handleNewClient(socket);
+                        
+                        if (pools[currentPool])
+                            pools[currentPool].getStratumServer().handleNewClient(socket);
+                        else
+                            pools[initialPool].getStratumServer().handleNewClient(socket);
 
                     }).listen(parseInt(port), function() {
                         logger.debug(logSystem, logComponent, logSubCat, 'Switching "' + switchName
@@ -303,5 +298,35 @@ module.exports = function(logger){
             }
         });
         return foundCoin;
+    };
+
+    //
+    // Called when stratum pool emits its 'started' event to copy the initial diff and vardiff 
+    // configuation for any proxy switching ports configured into the stratum pool object.
+    // 开始标准难度，复制难度（如果配置的话），覆盖矿池默认难度
+    this.setDifficultyForProxyPort = function(pool, coin, algo) {
+
+        logger.debug(logSystem, logComponent, algo, 'Setting proxy difficulties after pool start');
+
+        Object.keys(portalConfig.switching).forEach(function(switchName) {
+            if (!portalConfig.switching[switchName].enabled) return;
+
+            var switchAlgo = portalConfig.switching[switchName].algorithm;
+            if (pool.options.coin.algorithm !== switchAlgo) return;
+
+            // we know the switch configuration matches the pool's algo, so setup the diff and 
+            // vardiff for each of the switch's ports
+            for (var port in portalConfig.switching[switchName].ports) {
+
+                if (portalConfig.switching[switchName].ports[port].varDiff)
+                    pool.setVarDiff(port, portalConfig.switching[switchName].ports[port].varDiff);
+
+                if (portalConfig.switching[switchName].ports[port].diff){
+                    if (!pool.options.ports.hasOwnProperty(port)) 
+                        pool.options.ports[port] = {};
+                    pool.options.ports[port].diff = portalConfig.switching[switchName].ports[port].diff;
+                }
+            }
+        });
     };
 };
