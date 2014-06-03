@@ -273,8 +273,12 @@ var startCliListener = function(){
                 processCoinSwitchCommand(params, options, reply);
                 break;
             case 'reloadpool':
+//加入函数币加载调用
+                poolConfigs = buildPoolConfigs();
                 Object.keys(cluster.workers).forEach(function(id) {
-                    cluster.workers[id].send({type: 'reloadpool', coin: params[0] });
+//                    cluster.workers[id].send({type: 'reloadpool', coin: params[0] });
+//修正
+                    cluster.workers[id].send({type: 'reloadpool', coin: params[0], pools: JSON.stringify(poolConfigs) });
                 });
                 reply('reloaded pool ' + params[0]);
                 break;
