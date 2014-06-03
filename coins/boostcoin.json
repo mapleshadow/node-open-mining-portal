@@ -1,0 +1,6 @@
+{
+    "name": "Boostcoin",
+    "symbol": "BOST",
+    "algorithm": "x13",
+    "mposDiffMultiplier": 256
+}
