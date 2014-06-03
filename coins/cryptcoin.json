@@ -1,0 +1,6 @@
+{
+    "name": "Cryptcoin",
+    "symbol": "CRY",
+    "algorithm": "x11",
+    "mposDiffMultiplier": 256
+}

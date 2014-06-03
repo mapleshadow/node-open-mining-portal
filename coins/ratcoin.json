@@ -1,0 +1,6 @@
+{
+    "name": "Ratcoin",
+    "symbol": "RATC",
+    "algorithm": "x11",
+    "mposDiffMultiplier": 256
+}
