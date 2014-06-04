@@ -1,9 +1,7 @@
 {
-    "name": "X11coin",
-    "symbol": "XC",
+    "name": "Blackcatcoin",
+    "symbol": "BCAT",
     "algorithm": "x11",
     "mposDiffMultiplier": 256,
     "txMessages": false //optional - defaults to false,
-//    "peerMagic": "dbadbdda",
-//    "peerMagicTestnet": "dd4ddd4d"
 }
