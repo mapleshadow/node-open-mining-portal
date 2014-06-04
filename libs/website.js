@@ -25,9 +25,18 @@ module.exports = function(logger){
     var poolConfigs = JSON.parse(process.env.pools);
 
     var websiteConfig = portalConfig.website;
+//改
+//    var portalApi = new api(logger, portalConfig, poolConfigs);
+//    var portalStats = portalApi.stats;
+//改成如下
+    var portalApi;
+    var portalStats;
 
-    var portalApi = new api(logger, portalConfig, poolConfigs);
-    var portalStats = portalApi.stats;
+    var startPortalApi = function() {
+        portalApi = new api(logger, portalConfig, poolConfigs);
+        portalStats = portalApi.stats;
+    }
+    startPortalApi();
 
     var logSystem = 'Website';
 
@@ -52,6 +61,21 @@ module.exports = function(logger){
     var keyScriptTemplate = '';
     var keyScriptProcessed = '';
 
+//增加
+    process.on('message', function(message) {
+        switch(message.type){
+            case 'reloadpool':
+                if (message.coin) {
+                    var messageCoin = message.coin.toLowerCase();
+                    var poolTarget = Object.keys(poolConfigs).filter(function(p){
+                        return p.toLowerCase() === messageCoin;
+                    })[0];
+                    poolConfigs  = JSON.parse(message.pools);
+                    startPortalApi();
+                }
+                break;
+        }
+    });
 
     var processTemplates = function(){
 
