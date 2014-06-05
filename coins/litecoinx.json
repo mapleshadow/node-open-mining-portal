@@ -2,6 +2,6 @@
     "name": "Litecoinx",
     "symbol": "LTCX",
     "algorithm": "x11",
-    "txMessages": false, //optional - defaults to false,
-    "mposDiffMultiplier": 256
+    "mposDiffMultiplier": 256,
+    "txMessages": false //optional - defaults to false,
 }
