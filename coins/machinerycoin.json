@@ -1,0 +1,7 @@
+{
+    "name": "Machinerycoin",
+    "symbol": "MHYC",
+    "algorithm": "x11",
+    "mposDiffMultiplier": 256,
+    "txMessages": false //optional - defaults to false
+}

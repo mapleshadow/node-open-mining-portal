@@ -1,6 +1,6 @@
 {
-    "name": "Blackcatcoin",
-    "symbol": "BCAT",
+    "name": "Mugatucoin",
+    "symbol": "MUGA",
     "algorithm": "x11",
     "mposDiffMultiplier": 256,
     "txMessages": false //optional - defaults to false,
