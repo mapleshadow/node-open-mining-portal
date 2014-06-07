@@ -4,7 +4,7 @@ var bignum = require('bignum');
 var algos  = require('stratum-pool/lib/algoProperties.js');
 var util   = require('stratum-pool/lib/util.js');
 
-var CoinWarz = require('./apiCoinWarz.js');
+//var CoinWarz = require('./apiCoinWarz.js');
 var Cryptsy  = require('./apiCryptsy.js');
 var Poloniex = require('./apiPoloniex.js');
 var Mintpal  = require('./apiMintpal.js');
