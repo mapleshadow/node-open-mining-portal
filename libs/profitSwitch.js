@@ -56,7 +56,9 @@ module.exports = function(logger){
                 name: poolConfig.coin.name,
                 symbol: poolConfig.coin.symbol,
                 difficulty: 0,
-                reward: 0,
+            //调整
+            //reward: 0,
+            reward: (parseInt(poolConfig.coin.reward) || 0),
                 exchangeInfo: {}
             };
             profitStatus[algo][poolConfig.coin.symbol] = coinStatus;
@@ -586,8 +588,10 @@ module.exports = function(logger){
             var target = response.target ? bignum(response.target, 16) : util.bignumFromBitsHex(response.bits);
             coinStatus.difficulty = parseFloat((diff1 / target.toNumber()).toFixed(9));
             logger.debug(logSystem, symbol, 'difficulty is ' + coinStatus.difficulty);
-
-            coinStatus.reward = response.coinbasevalue / 100000000;
+            //增加币属性判断值
+            if (coinStatus.reward == 0) {
+                coinStatus.reward = response.coinbasevalue / 100000000;
+            };
             callback(null);
         });
     };
