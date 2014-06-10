@@ -1,0 +1,7 @@
+{
+    "name": "Glyphcoin",
+    "symbol": "GLYPH",
+    "algorithm": "x11",
+    "mposDiffMultiplier": 256,
+    "txMessages": false //optional - defaults to false
+}
