@@ -1,0 +1,7 @@
+{
+    "name": "Kiwicoin",
+    "symbol": "KIWI",
+    "algorithm": "x11",
+    "mposDiffMultiplier": 256,
+    "txMessages": false //optional - defaults to false
+}
