@@ -1,0 +1,6 @@
+{
+    "name": "LimecoinX",
+    "symbol": "LIMX",
+    "algorithm": "x11",
+    "mposDiffMultiplier": 256
+}
