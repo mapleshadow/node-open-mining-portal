@@ -1,6 +1,6 @@
 {
-    "name": "Mastiffcoin",
-    "symbol": "MAST",
+    "name": "Leaguecoin",
+    "symbol": "LOL",
     "algorithm": "x11",
     "mposDiffMultiplier": 256,
     "txMessages": false//optional - defaults to false,
