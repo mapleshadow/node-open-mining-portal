@@ -1,0 +1,6 @@
+{
+    "name": "Truckcoin",
+    "symbol": "TRK",
+    "algorithm": "x11",
+    "mposDiffMultiplier": 256
+}
