@@ -1,6 +1,6 @@
 {
-    "name": "Mugatucoin",
-    "symbol": "MUGA",
+    "name": "Lioncoin",
+    "symbol": "LION",
     "algorithm": "x11",
     "mposDiffMultiplier": 256,
     "txMessages": false //optional - defaults to false,
