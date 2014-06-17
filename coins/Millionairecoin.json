@@ -1,0 +1,7 @@
+{
+    "name": "Millionairecoin",
+    "symbol": "MIL",
+    "algorithm": "x11",
+    "mposDiffMultiplier": 256,
+    "txMessages": false //optional - defaults to false,
+}
