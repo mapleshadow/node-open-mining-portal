@@ -94,10 +94,6 @@ module.exports = function(logger){
     // 
     // setup APIs
     //
-    var coinwarzApi =  new CoinWarz(
-        // 'API_KEY',
-        // 'API_SECRET'
-    );
     var poloApi =  new Poloniex(
         // 'API_KEY',
         // 'API_SECRET'
