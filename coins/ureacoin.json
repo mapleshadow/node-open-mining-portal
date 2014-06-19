@@ -1,6 +1,6 @@
 {
-    "name": "Leaguecoin",
-    "symbol": "LOL",
+    "name": "Ureacoin",
+    "symbol": "URO",
     "algorithm": "x11",
     "mposDiffMultiplier": 256,
     "txMessages": false//optional - defaults to false,
