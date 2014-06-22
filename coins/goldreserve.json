@@ -1,6 +1,6 @@
 {
-    "name": "Supercoin",
-    "symbol": "SUPER",
+    "name": "Goldreserve",
+    "symbol": "XGR",
     "algorithm": "x11",
     "txMessages": false, //optional - defaults to false,
     "mposDiffMultiplier": 256
