@@ -1,6 +1,6 @@
 {
-    "name": "Citizencoin",
-    "symbol": "CTZ",
+    "name": "Universecoin",
+    "symbol": "UNVC",
     "algorithm": "x11",
     "mposDiffMultiplier": 256,
     "txMessages": false //optional - defaults to false,
