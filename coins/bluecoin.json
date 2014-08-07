@@ -1,7 +1,7 @@
 {
-    "name": "Bluecoin",
-    "symbol": "BLU",
-    "algorithm": "x11",
-    "mposDiffMultiplier": 256,
-    "txMessages": false //optional - defaults to false,
+    "name": "bluecoin",
+    "symbol": "blu",
+    "algorithm": "scrypt",
+    "peerMagic": "fef5abaa",
+    "peerMagicTestnet": "eaceedcd"
 }
